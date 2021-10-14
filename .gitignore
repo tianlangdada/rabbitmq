@@ -1,0 +1,8 @@
+# pycharm
+.idea/
+.DS_Store
+
+# vscode
+.vscode/
+
+__pycache__/
