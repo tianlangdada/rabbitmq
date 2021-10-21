@@ -9,7 +9,7 @@ channel.exchange_declare(exchange="normal_exchange", exchange_type="direct")
 # 队列内消息过期时间5s，到期后进入死信交换器
 channel.queue_declare(queue="queue_5s", durable=True,
                       arguments={
-                          "x-message-ttl": 1000,  # 消息过期时间(5s)
+                          "x-message-ttl": 5000,  # 消息过期时间(5s)
                           "x-dead-letter-exchange": "dlx_5s",  # 死信交换器
                       })
 channel.queue_bind(queue="queue_5s", exchange="normal_exchange", routing_key="routing_5s")
